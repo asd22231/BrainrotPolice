@@ -9,7 +9,7 @@ return function(section)
     local traintreadev = eventsFold.TrainTreadmillEvent
 
     local speedWalls = workspace.Gameplay.SpeedWalls
-    workspace.Map.EntranceBlocker:Destroy()
+    if workspace.Map:FindFirstChild("EntranceBlocker") then workspace.Map.EntranceBlocker:Destroy() end
     
     local plr = game:GetService("Players").LocalPlayer
     local stamamt = plr.StaminaLevel

@@ -50,7 +50,7 @@ return function(section)
                             return
                         end
 
-                        local speed = tonumber(speedLabel.Text:match("[%d%.]+")) or 16
+                        local speed = tonumber(speedLabel.Text:match("[%d%.]+")) - 7
 
                         local currentPos = hrp.Position
                         local flatPos = Vector3.new(currentPos.X, targetY, currentPos.Z)

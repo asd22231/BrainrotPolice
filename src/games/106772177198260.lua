@@ -31,7 +31,7 @@ return function(section)
         if br and br:GetAttribute("brainrot") then
             for plotNum = 1, 30 do
                 placeEv:FireServer("Add", "Plot" .. plotNum, br.Name)
-                task.wait()
+                task.wait(0.5)
             end
         end
     end)

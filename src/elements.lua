@@ -62,4 +62,16 @@ function stuff:Unsupported(king, cb)
     newUs.glbtn.MouseButton1Click:Connect(cb)
 end
 
+function stuff:CredHead(king, txt)
+    local newHead = elements.CreditHeader:Clone()
+    newHead.Text = "> " .. txt
+    newHead.Parent = king
+end
+
+function stuff:CredPerson(king, txt)
+    local newCred = elements.CreditPerson:Clone()
+    newCred.Text = "      + " .. txt
+    newCred.Parent = king
+end
+
 return stuff

@@ -183,9 +183,15 @@ for sect, c in pairs(creditsList) do
 end
 
 elements:Toggle("Disable 3D Rendering", Sections.Settings.Container, function(v)
+    local dec = httpservice:JSONDecode(readfile("BrainrotPolice/Config.json"))
+    dec.settings.disable_3d_rendering = v
+    writefile("BrainrotPolice/Config.json", httpservice:JSONEncode(dec))
     game:GetService("RunService"):Set3dRenderingEnabled(not v)
 end)
 
 elements:Toggle("Auto Rejoin (when kicked)", Sections.Settings.Container, function(v)
+    local dec = httpservice:JSONDecode(readfile("BrainrotPolice/Config.json"))
+    dec.settings.auto_rejoin_on_kick = v
+    writefile("BrainrotPolice/Config.json", httpservice:JSONEncode(dec))
     getgenv().autorjjjj = v
 end)

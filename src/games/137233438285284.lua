@@ -59,6 +59,8 @@ return function(section, data)
         suffixValue[suf] = 1000 ^ i
     end
 
+    elements:Label("BUY YOUR FIRST CHICKEN BEFORE AUTOFARMING (OTHERWISE WHOLE GAME BREAKS)")
+
     elements:Toggle("Autofarm", section, setdata.farming, function(v)
         env.setconfig("farmrots", v)
 
